@@ -3,98 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Scarlett RP — Loading Screen</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>HALF-LIFE: ALYX — Loading Screen</title>
+  <link rel="stylesheet" href="./styles.css" />
 </head>
-<body>
-  <div class="bg-gradient" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="hearts" id="hearts" aria-hidden="true"></div>
-  <div class="sparkles" aria-hidden="true">
-    <span></span><span></span><span></span><span></span><span></span><span></span>
-  </div>
 
+<body>
   <main class="screen">
-    <section class="paper-board" aria-label="Экран подключения Scarlett RP">
-      <div class="holes" aria-hidden="true">
-        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    <div class="bg"></div>
+    <div class="left-panel"></div>
+    <div class="grid"></div>
+    <div class="scanlines"></div>
+    <div class="noise"></div>
+
+    <section class="ui">
+      <div class="top-dots">••••••••••••</div>
+
+      <div class="brand" aria-label="HALF-LIFE ALYX">
+        <div class="half-life">HALF-LIFE</div>
+        <div class="alyx">ALYX</div>
       </div>
 
-      <aside class="note note-left" aria-hidden="true">
-        <div class="tape"></div>
-        <div class="note-lines"></div>
-      </aside>
-
-      <aside class="note note-right" aria-hidden="true">
-        <div class="rings">
-          <span></span><span></span><span></span><span></span><span></span>
+      <div class="tip">
+        <div class="tip-label">СОВЕТ</div>
+        <div class="tip-text" id="tipText">
+          Не забудьте осмотреть окружение.<br />
+          В зоне карантина можно найти<br />
+          полезные ресурсы.
         </div>
-        <div class="note-lines"></div>
-      </aside>
+      </div>
 
-      <div class="corner-fold" aria-hidden="true"></div>
-      <div class="sticker sticker-1" aria-hidden="true">♥</div>
-      <div class="sticker sticker-2" aria-hidden="true">♥</div>
-      <div class="sticker sticker-3" aria-hidden="true">♥</div>
-
-      <div class="content">
-        <div class="intro">
-          <p class="eyebrow">Добро пожаловать</p>
-          <h1 class="title">Scarlett RP</h1>
-          <p class="subtitle">Подключение<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+      <div class="technical">
+        <div class="mini-row">
+          <div class="lambda">λ</div>
+          <div class="boxes">
+            <div class="box">0</div>
+            <div class="box">8</div>
+          </div>
         </div>
 
-        <div class="board-panels">
-          <nav class="main-menu" aria-labelledby="main-menu-title">
-            <span class="menu-pin menu-pin-left" aria-hidden="true"></span>
-            <span class="menu-pin menu-pin-right" aria-hidden="true"></span>
-            <h2 id="main-menu-title">Правила сервера</h2>
-            <ul class="main-menu-list">
-              <li>
-                <span class="menu-label">Быть крутым</span>
-                <span class="menu-index">01</span>
-              </li>
-              <li>
-                <span class="menu-label">Быть добрым</span>
-                <span class="menu-index">02</span>
-              </li>
-              <li>
-                <span class="menu-label">Быть милым</span>
-                <span class="menu-index">03</span>
-              </li>
-              <li>
-                <span class="menu-label">Быть адекватным</span>
-                <span class="menu-index">04</span>
-              </li>
-            </ul>
-          </nav>
+        <div class="microline"></div>
+        <div class="orange-line"></div>
 
-          <section class="staff-card" aria-labelledby="staff-title">
-            <div class="pin" aria-hidden="true"></div>
-            <h2 id="staff-title">Staff</h2>
-            <ul class="staff-list">
-              <li>
-                <span class="staff-name">Andrey Reinz</span>
-                <span class="staff-role">Developer</span>
-              </li>
-            </ul>
-          </section>
+        <div class="mini-chart">
+          <svg viewBox="0 0 120 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 22 L12 18 L23 21 L34 15 L45 23 L55 17 L66 9 L78 14 L90 11 L101 16 L120 14"
+              stroke="rgba(222,232,228,0.72)" stroke-width="1.5"/>
+          </svg>
         </div>
 
-        <div class="angled-note" aria-label="Дополнительная заметка">
-          <p>Уважай игроков и соблюдай правила сервера.</p>
-        </div>
-
-        <div class="footer-note">
-          <span class="footer-line"></span>
-          <p>Спасибо, что заходишь на Scarlett RP</p>
-          <span class="footer-line"></span>
+        <div class="status-lines">
+          Зона карантина // Объект 17<br />
+          Статус — подключение<br />
+          Версия протокола 1.7.8
         </div>
       </div>
     </section>
+
+    <section class="loading-footer">
+      <div class="progress">
+        <div class="progress-fill"></div>
+      </div>
+
+      <div class="progress-meta">
+        <span class="footer-status" id="footerStatus">Подключение...</span>
+      </div>
+
+      <div class="console-log" aria-hidden="true">
+        <div class="console-track">
+          <div class="log-line">[17:08:02] combine.core / handshake accepted</div>
+          <div class="log-line">[17:08:02] route.c17 / tunnel packet 04: verified</div>
+          <div class="log-line warn">[17:08:03] quarantine.scan / anomaly count: 03</div>
+          <div class="log-line">[17:08:03] shader.cache / rebuilding sector material index</div>
+          <div class="log-line">[17:08:04] gravity.glove / left actuator online</div>
+          <div class="log-line">[17:08:04] gravity.glove / right actuator online</div>
+          <div class="log-line">[17:08:05] nav.mesh / object 17 path nodes received</div>
+          <div class="log-line warn">[17:08:05] audio.bus / distant signal detected</div>
+          <div class="log-line">[17:08:06] resource.stream / city17_alley_05.vpk mounted</div>
+          <div class="log-line">[17:08:06] memory.heap / defrag pass complete</div>
+          <div class="log-line">[17:08:07] lighting.grid / probe volume 67%</div>
+          <div class="log-line">[17:08:07] citizen.radio / encrypted carrier ignored</div>
+          <div class="log-line">[17:08:08] session / awaiting final sync...</div>
+
+          <div class="log-line">[17:08:02] combine.core / handshake accepted</div>
+          <div class="log-line">[17:08:02] route.c17 / tunnel packet 04: verified</div>
+          <div class="log-line warn">[17:08:03] quarantine.scan / anomaly count: 03</div>
+          <div class="log-line">[17:08:03] shader.cache / rebuilding sector material index</div>
+          <div class="log-line">[17:08:04] gravity.glove / left actuator online</div>
+          <div class="log-line">[17:08:04] gravity.glove / right actuator online</div>
+          <div class="log-line">[17:08:05] nav.mesh / object 17 path nodes received</div>
+          <div class="log-line warn">[17:08:05] audio.bus / distant signal detected</div>
+          <div class="log-line">[17:08:06] resource.stream / city17_alley_05.vpk mounted</div>
+          <div class="log-line">[17:08:06] memory.heap / defrag pass complete</div>
+          <div class="log-line">[17:08:07] lighting.grid / probe volume 67%</div>
+          <div class="log-line">[17:08:07] citizen.radio / encrypted carrier ignored</div>
+          <div class="log-line">[17:08:08] session / awaiting final sync...</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="right-dots">
+      <span></span><span></span><span></span><span></span>
+    </div>
+
+    <div class="edge-data"></div>
+    <div class="valve">VALVE</div>
   </main>
 
-  <script src="script.js"></script>
+  <script src="./script.js"></script>
 </body>
 </html>

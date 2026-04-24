@@ -1,41 +1,40 @@
-const heartsRoot = document.getElementById('hearts');
+const footerStatuses = [
+  "Подключение...",
+  "Поиск локального узла...",
+  "Чтение ресурсов...",
+  "Сборка навигационной сетки...",
+  "Ожидание стабилизации..."
+];
 
-function createHeart(index) {
-  const heart = document.createElement('span');
-  heart.className = 'heart-float';
-  heart.textContent = '♥';
+const tips = [
+  "Не забудьте осмотреть окружение.<br />В зоне карантина можно найти<br />полезные ресурсы.",
+  "Держите грави-перчатки готовыми.<br />Некоторые объекты реагируют<br />на дистанционный захват.",
+  "Слушайте окружение.<br />Радиосигналы могут подсказать<br />безопасный маршрут.",
+  "Не тратьте боеприпасы впустую.<br />В закрытых секторах ресурсов<br />может быть недостаточно.",
+  "Проверяйте ящики и шкафы.<br />Полезные предметы часто скрыты<br />в затемнённых углах."
+];
 
-  const size = 14 + Math.random() * 26;
-  const left = Math.random() * 100;
-  const duration = 8 + Math.random() * 8;
-  const delay = Math.random() * -duration;
+const footerStatus = document.getElementById("footerStatus");
+const tipText = document.getElementById("tipText");
 
-  heart.style.left = `${left}%`;
-  heart.style.fontSize = `${size}px`;
-  heart.style.animationDuration = `${duration}s`;
-  heart.style.animationDelay = `${delay}s`;
-  heart.style.opacity = (0.28 + Math.random() * 0.48).toFixed(2);
+let footerIndex = 0;
+let tipIndex = 0;
 
-  if (index % 3 === 0) {
-    heart.style.color = 'rgba(239, 192, 192, 0.85)';
-  } else if (index % 3 === 1) {
-    heart.style.color = 'rgba(222, 160, 159, 0.78)';
-  } else {
-    heart.style.color = 'rgba(250, 225, 228, 0.9)';
-  }
+function swapText(el, html) {
+  el.classList.add("is-changing");
 
-  heartsRoot.appendChild(heart);
+  window.setTimeout(() => {
+    el.innerHTML = html;
+    el.classList.remove("is-changing");
+  }, 260);
 }
 
-for (let i = 0; i < 20; i += 1) {
-  createHeart(i);
-}
+window.setInterval(() => {
+  footerIndex = (footerIndex + 1) % footerStatuses.length;
+  swapText(footerStatus, footerStatuses[footerIndex]);
+}, 2400);
 
-const subtitle = document.querySelector('.subtitle');
-const subtitleBase = 'Подключение';
-let dots = 0;
-
-setInterval(() => {
-  dots = (dots + 1) % 4;
-  subtitle.innerHTML = `${subtitleBase}<span class="dots">${'.'.repeat(dots).padEnd(3, '<span style="visibility:hidden">.</span>')}</span>`;
-}, 700);
+window.setInterval(() => {
+  tipIndex = (tipIndex + 1) % tips.length;
+  swapText(tipText, tips[tipIndex]);
+}, 5200);
