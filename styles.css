@@ -45,7 +45,7 @@ body {
       rgba(2, 7, 8, 0.30) 0%,
       rgba(2, 7, 8, 0.04) 42%,
       rgba(2, 7, 8, 0.78) 100%),
-    url("./alyx_loading_bg.png") right center / cover no-repeat;
+    url("https://riko26345.github.io/RR.github.io/alyx_loading_bg.png") right center / cover no-repeat;
   filter: saturate(0.78) contrast(1.08) brightness(0.78);
 }
 
@@ -484,7 +484,7 @@ body {
         rgba(2, 7, 8, 0.96) 0%,
         rgba(2, 7, 8, 0.84) 58%,
         rgba(2, 7, 8, 0.48) 100%),
-      url("./alyx_loading_bg.png") right center / cover no-repeat;
+      url("https://riko26345.github.io/RR.github.io/alyx_loading_bg.png") right center / cover no-repeat;
   }
 
   .ui {
