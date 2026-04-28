@@ -34,15 +34,7 @@ body {
 .bg {
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(90deg,
-      rgba(2, 7, 8, 0.98) 0%,
-      rgba(2, 7, 8, 0.94) 20%,
-      rgba(2, 7, 8, 0.82) 40%,
-      rgba(2, 7, 8, 0.55) 60%,
-      rgba(2, 7, 8, 0.18) 80%,
-      transparent 100%),
-    url("https://riko26345.github.io/RR.github.io/alyx_loading_bg.png") right center / cover no-repeat;
+  background: url("alyx_loading_bg.png") right center / cover no-repeat;
 }
 
 .ui {
@@ -412,13 +404,7 @@ body {
   }
 
   .bg {
-    background:
-      linear-gradient(90deg,
-        rgba(2, 7, 8, 0.98) 0%,
-        rgba(2, 7, 8, 0.90) 35%,
-        rgba(2, 7, 8, 0.60) 65%,
-        rgba(2, 7, 8, 0.15) 100%),
-      url("https://riko26345.github.io/RR.github.io/alyx_loading_bg.png") right center / cover no-repeat;
+    background: url("alyx_loading_bg.png") right center / cover no-repeat;
   }
 
   .ui {
