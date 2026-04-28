@@ -36,80 +36,13 @@ body {
   inset: 0;
   background:
     linear-gradient(90deg,
-      rgba(2, 7, 8, 1) 0%,
-      rgba(2, 7, 8, 0.98) 36%,
-      rgba(2, 7, 8, 0.88) 48%,
-      rgba(2, 7, 8, 0.48) 62%,
-      rgba(2, 7, 8, 0.24) 100%),
-    linear-gradient(180deg,
-      rgba(2, 7, 8, 0.30) 0%,
-      rgba(2, 7, 8, 0.04) 42%,
-      rgba(2, 7, 8, 0.78) 100%),
+      rgba(2, 7, 8, 0.98) 0%,
+      rgba(2, 7, 8, 0.94) 20%,
+      rgba(2, 7, 8, 0.82) 40%,
+      rgba(2, 7, 8, 0.55) 60%,
+      rgba(2, 7, 8, 0.18) 80%,
+      transparent 100%),
     url("https://riko26345.github.io/RR.github.io/alyx_loading_bg.png") right center / cover no-repeat;
-  filter: saturate(0.78) contrast(1.08) brightness(0.78);
-}
-
-.left-panel {
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 54vw;
-  background:
-    radial-gradient(circle at 28% 26%, rgba(38, 62, 61, 0.16), transparent 42%),
-    linear-gradient(90deg, rgba(1, 6, 7, 0.98), rgba(1, 6, 7, 0.88) 68%, rgba(1, 6, 7, 0.15));
-  pointer-events: none;
-}
-
-.grid {
-  position: absolute;
-  inset: 0;
-  opacity: 0.085;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.14) 1px, transparent 1px);
-  background-size: 46px 46px;
-  mask-image: linear-gradient(90deg, black 0%, black 48%, transparent 86%);
-  pointer-events: none;
-}
-
-.scanlines {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.10;
-  background: repeating-linear-gradient(
-    to bottom,
-    rgba(255,255,255,0.055) 0px,
-    rgba(255,255,255,0.055) 1px,
-    transparent 1px,
-    transparent 5px
-  );
-  animation: scan 8s linear infinite;
-}
-
-@keyframes scan {
-  from { transform: translateY(0); }
-  to { transform: translateY(24px); }
-}
-
-.noise {
-  position: absolute;
-  inset: -40px;
-  pointer-events: none;
-  opacity: 0.07;
-  mix-blend-mode: screen;
-  background-image:
-    radial-gradient(circle at 12% 18%, rgba(255,255,255,0.34) 0 1px, transparent 1px),
-    radial-gradient(circle at 68% 40%, rgba(255,255,255,0.25) 0 1px, transparent 1px),
-    radial-gradient(circle at 32% 76%, rgba(255,255,255,0.22) 0 1px, transparent 1px);
-  background-size: 113px 97px, 151px 137px, 181px 173px;
-  animation: noiseShift 3.2s steps(3) infinite;
-}
-
-@keyframes noiseShift {
-  0% { transform: translate(0, 0); }
-  33% { transform: translate(-14px, 8px); }
-  66% { transform: translate(9px, -10px); }
-  100% { transform: translate(0, 0); }
 }
 
 .ui {
@@ -481,9 +414,10 @@ body {
   .bg {
     background:
       linear-gradient(90deg,
-        rgba(2, 7, 8, 0.96) 0%,
-        rgba(2, 7, 8, 0.84) 58%,
-        rgba(2, 7, 8, 0.48) 100%),
+        rgba(2, 7, 8, 0.98) 0%,
+        rgba(2, 7, 8, 0.90) 35%,
+        rgba(2, 7, 8, 0.60) 65%,
+        rgba(2, 7, 8, 0.15) 100%),
       url("https://riko26345.github.io/RR.github.io/alyx_loading_bg.png") right center / cover no-repeat;
   }
 
